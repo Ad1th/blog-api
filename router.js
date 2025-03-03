@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     const session = data.session;
-    if (!session && protectedPages.includes(currentPage)) {
+    if (!session?.user && protectedPages.includes(currentPage)) {
       window.location.href = "/login.html";
     } else if (
       session &&
