@@ -3,17 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Blog Homepage</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div id="app">
-      <h1>Welcome to the Homepage</h1>
-      <p>You are logged in!</p>
+      <h1>Welcome to the Blog</h1>
+      <div id="user-info"></div>
       <button id="logout-btn">Logout</button>
+
+      <h2>Create New Post</h2>
+      <form id="create-post-form">
+        <input type="text" id="post-title" placeholder="Title" required />
+        <textarea id="post-content" placeholder="Content" required></textarea>
+        <button type="submit">Create Post</button>
+      </form>
+
+      <h2>Blog Posts</h2>
+      <div id="posts-container"></div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="/js/auth.js"></script>
-    <script src="/js/router.js"></script>
+    <script src="auth.js"></script>
+    <script src="blog.js"></script>
+    <script src="router.js"></script>
   </body>
 </html>

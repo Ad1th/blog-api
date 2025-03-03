@@ -76,7 +76,7 @@ async function handleSignUp(e) {
     alert("Error signing up: " + error.message);
   } else {
     alert("Signed up successfully! Please check your email for confirmation.");
-    window.location.href = "/login.html";
+    window.location.href = "login.html";
   }
 }
 

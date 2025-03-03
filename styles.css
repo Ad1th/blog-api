@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f4f4f4;
+  background-color: #fefefe;
 }
 
 .container {
@@ -28,4 +28,33 @@ button {
   background: blue;
   color: white;
   cursor: pointer;
+}
+
+/* Add these to your existing styles */
+
+#posts-container {
+  margin-top: 20px;
+}
+
+.post {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#create-post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#create-post-form input,
+#create-post-form textarea {
+  padding: 5px;
+}
+
+#create-post-form button {
+  align-self: flex-start;
 }
