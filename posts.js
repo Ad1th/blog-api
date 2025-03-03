@@ -36,6 +36,7 @@ async function submitPost() {
 
   const title = document.getElementById("postTitle").value.trim();
   const content = document.getElementById("postContent").value.trim();
+
   if (title && content) {
     try {
       const { error } = await supabase
@@ -76,6 +77,14 @@ async function initializeApp() {
     const initialized = await loadSupabaseLibrary();
     if (initialized) {
       console.log("Supabase library loaded successfully");
+
+      // Add event listener to the post-form to handle submission
+      const postForm = document.getElementById("post-form");
+      postForm.addEventListener("submit", async (e) => {
+        e.preventDefault(); // Prevent default form submission
+        await submitPost();
+      });
+
       // Load existing posts immediately upon initialization
       await Promise.all([loadPosts()]);
     } else {
