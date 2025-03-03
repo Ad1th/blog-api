@@ -1,5 +1,0 @@
-const { data: { session } } = await supabase.auth.getSession();
-if (session) {
-  console.log("JWT Token:", session.access_token);
-}
- above to check and display JWT

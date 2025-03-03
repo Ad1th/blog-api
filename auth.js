@@ -76,7 +76,7 @@ async function handleSignUp(e) {
     alert("Error signing up: " + error.message);
   } else {
     alert("Signed up successfully! Please check your email for confirmation.");
-    window.location.href = "login.html";
+    window.location.href = "/login.html";
   }
 }
 
@@ -123,9 +123,9 @@ async function checkAuthState() {
   if (session) {
     // User is signed in
     console.log("User is signed in:", session.user);
-    if (window.location.pathname !== "/home.html") {
+    if (window.location.pathname !== "/index.html") {
       // Redirect to homepage if not already there
-      window.location.href = "/home.html";
+      window.location.href = "/index.html";
     }
   } else {
     // User is not signed in
