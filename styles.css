@@ -54,3 +54,35 @@ textarea {
   padding: 10px;
   margin: 10px 0;
 }
+
+/* Post Item */
+.post-item {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.post-item h3 {
+  margin: 0;
+  color: #333;
+}
+
+.post-item p {
+  color: #555;
+}
+
+.post-item button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.post-item button:hover {
+  background: #0056b3;
+}

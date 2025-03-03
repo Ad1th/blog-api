@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,27 +7,22 @@
     <title>Home</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <div id="app">
       <h1>Welcome to the Blog</h1>
       <p class="logged">You are logged in!</p>
       <button id="logout-btn">Logout</button>
     </div>
-    <a class="container">
+
+    <div class="container">
       <h1>Blog Posts</h1>
-
-      <form id="post-form">
-        <input type="text" id="postTitle" placeholder="Title" required />
-        <textarea
-          id="postContent"
-          placeholder="Write your post..."
-          required
-        ></textarea>
-        <button type="submit">Create Post</button>
-      </form>
-
-      <a href="viewpost.html"><h2>All Posts</h2></a>
-      <div id="postList"></div>
+      <a href="sendpost.html"><button>Create a New Post</button></a>
+      <br /><br />
+      <a href="viewpost.html"><button>All Posts</button></a>
+      <br /><br />
+      <a href="editpost.html"><button>Edit Your Posts</button></a>
+      <!-- <div id="postList"></div> -->
     </div>
 
     <script type="module" src="posts.js"></script>

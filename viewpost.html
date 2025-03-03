@@ -3,21 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>All Posts</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="app">
-      <h1>Welcome to the Blog</h1>
-      <p class="logged">You are logged in!</p>
-      <button id="logout-btn">Logout</button>
-    </div>
     <div class="container">
       <h2>All Posts</h2>
-      <div id="postList"></div>
+      <a href="index.html"><button>homepage</button></a>
+      <a href="sendpost.html"><button>upload a new post</button></a>
+      <div id="postList"><p>Loading...</p></div>
     </div>
 
-    <script type="module" src="posts.js"></script>
+    <script type="module" src="viewpost.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Post</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Create a New Post</h1>
+      <form id="post-form">
+        <input type="text" id="postTitle" placeholder="Title" required />
+        <textarea
+          id="postContent"
+          placeholder="Write your post..."
+          required
+        ></textarea>
+        <button type="submit">←Submit Post</button>
+        <br />
+      </form>
+      <br />
+      <a href="index.html" class="back-link"><button>Back to Home</button></a>
+    </div>
+
+    <script type="module" src="sendpost.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </body>
+</html>
