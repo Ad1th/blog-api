@@ -12,7 +12,7 @@ SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 router = APIRouter()
-
+#
 # User signup
 @router.post("/signup")
 async def signup(email: str, password: str):
