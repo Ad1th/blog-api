@@ -12,26 +12,12 @@
       <p class="logged">You are logged in!</p>
       <button id="logout-btn">Logout</button>
     </div>
-    <a class="container">
-      <h1>Blog Posts</h1>
-
-      <form id="post-form">
-        <input type="text" id="postTitle" placeholder="Title" required />
-        <textarea
-          id="postContent"
-          placeholder="Write your post..."
-          required
-        ></textarea>
-        <button type="submit">Create Post</button>
-      </form>
-
-      <a href="viewpost.html"><h2>All Posts</h2></a>
+    <div class="container">
+      <h2>All Posts</h2>
       <div id="postList"></div>
     </div>
 
     <script type="module" src="posts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="auth.js"></script>
-    <script src="router.js"></script>
   </body>
 </html>

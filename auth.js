@@ -123,6 +123,10 @@ async function checkAuthState() {
   if (session) {
     // User is signed in
     console.log("User is signed in:", session.user);
+
+    // Save email in localStorage (you can also use sessionStorage if you need it only during the session)
+    localStorage.setItem("userEmail", session.user.email);
+
     if (window.location.pathname !== "/index.html") {
       // Redirect to homepage if not already there
       window.location.href = "/index.html";
@@ -136,6 +140,9 @@ async function checkAuthState() {
     }
   }
 }
+
+// Initialize the app when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", initializeApp);
 
 // Initialize the app when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", initializeApp);

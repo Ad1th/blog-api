@@ -3,6 +3,14 @@ const SUPABASE_ANON_KEY =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InltamxsYnFvemJzcXJ3emR0cGxzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA5ODUzMjUsImV4cCI6MjA1NjU2MTMyNX0.mSo_GvI3RlliYmmwkqWx2CW5Xynj-p7Ru9ErAZNoNOU";
 let supabase = null;
 
+const userEmail = localStorage.getItem("userEmail");
+if (userEmail) {
+  console.log("User email:", userEmail);
+  // Now you can pass the email along with the post when submitting
+} else {
+  console.error("No user email found in localStorage");
+}
+
 // Function to dynamically load Supabase library
 function loadSupabaseLibrary() {
   return new Promise((resolve, reject) => {
@@ -30,18 +38,18 @@ function loadSupabaseLibrary() {
     document.head.appendChild(script);
   });
 }
-// Submit a new post
 async function submitPost() {
   if (!supabase) return;
 
   const title = document.getElementById("postTitle").value.trim();
   const content = document.getElementById("postContent").value.trim();
+  const email = localStorage.getItem("userEmail"); // Retrieve email
 
-  if (title && content) {
+  if (title && content && email) {
     try {
       const { error } = await supabase
         .from("posts")
-        .insert([{ title, content }]);
+        .insert([{ title, content, email }]); // Insert email with the post
       if (error) throw error;
       document.getElementById("postTitle").value = "";
       document.getElementById("postContent").value = "";
