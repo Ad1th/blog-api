@@ -5,6 +5,8 @@ This is a blog management api made as a task for the Mozzila Firefox Club.
 This is an online blog, which give the user anonymous privileges, as well as a JWT-based authentication system, which gives control to the user over their posts.
 Everyone can view all posts, and create new posts, but if a user is signed in, they will be able to edit posts, delete posts, and view their old posts as well...
 
+Link to the deployed project: https://postvault.netlify.app/
+
 This is a snippet of the progress till backup_9 branch :
 ![image](https://github.com/user-attachments/assets/5f1d8ce6-353b-4236-aea1-c31747f7fe86)
 Homepage/landing page
@@ -14,3 +16,4 @@ Only logged-in users can access the edit post
 
 ![image](https://github.com/user-attachments/assets/cf89d300-6cca-4ac5-a1a0-582bd2e73682)
 Create Post functionality
+
